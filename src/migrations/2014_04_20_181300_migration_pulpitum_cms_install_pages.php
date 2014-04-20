@@ -21,8 +21,6 @@ class MigrationPulpitumCmsInstallPages extends Migration {
 			$table->string('identifier');
 			$table->string('content_heading')->nullable();
 			$table->text('content')->nullable();
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
 			$table->boolean('is_active')->default(1);
 			$table->timestamps();
 
