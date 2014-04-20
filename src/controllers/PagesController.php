@@ -22,7 +22,8 @@ class PagesController extends FrontendController{
 
 		$this->theme->set('keywords', $page->meta_keywords);
 		$this->theme->set('description', $page->meta_description);
-		$this->theme->setTitle($page->title);
+		$this->theme->prependTitle($page->title." | ");
+		$this->theme->layout($page->root_template);
 		return $this->theme->of('cms::pages.view', array("data" => $page))->render();
 	}
 
