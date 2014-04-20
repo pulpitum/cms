@@ -1,0 +1,25 @@
+{
+    "name": "pulpitum/cms",
+    "description": "",
+    "authors": [
+        {
+            "name": "Rguedes",
+            "email": "rolandoguedes@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers",
+            "src/models",
+        ],
+        "psr-0": {
+            "Pulpitum\\Cms\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
