@@ -18,4 +18,9 @@ class Pages extends Base{
 		});
 */
 	}
+
+	public static function View($identifier){
+		$page = Pages::where("identifier", $identifier)->where("is_active", 1)->first();
+		return $page;
+	}
 }
