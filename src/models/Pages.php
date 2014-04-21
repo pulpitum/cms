@@ -20,7 +20,8 @@ class Pages extends Base{
 	}
 
 	public static function View($identifier){
-		$page = Pages::where("identifier", $identifier)->where("is_active", 1)->first();
+		$lang = \Config::get('app.locale');
+		$page = Pages::where("identifier", $identifier)->where("is_active", 1)->whereIn("language", array("all",$lang))->first();
 		return $page;
 	}
 }

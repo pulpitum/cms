@@ -16,6 +16,7 @@ class MigrationPulpitumCmsInstallPages extends Migration {
 			$table->increments('id');
 			$table->string('title');
 			$table->string('root_template')->nullable();
+			$table->string('language')->default("en");
 			$table->text('meta_keywords')->nullable();
 			$table->text('meta_description')->nullable();
 			$table->string('identifier');
