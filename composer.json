@@ -15,8 +15,7 @@
         "classmap": [
             "src/migrations",
             "src/controllers",
-            "src/models",
-            "src/helpers"
+            "src/models"
         ],
         "psr-0": {
             "Pulpitum\\Cms\\": "src/"
