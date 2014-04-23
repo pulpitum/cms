@@ -8,7 +8,21 @@ class Pages extends Base{
 	protected $table = 'cms_pages';
 	protected $primaryKey = 'id';
 	protected $modelName = 'pages';	
+	
+	/**
+     * The columns to select when displaying an index.
+     *
+     * @var array
+     */
+    public static $index = array('id', 'title', 'language', 'identifier');
 
+    /**
+     * The columns to order by when displaying an index.
+     *
+     * @var string
+     */
+    public static $order = 'id';
+    
 	public $timestamps = true;	
 	public function __construct(){
 		parent::__construct();
