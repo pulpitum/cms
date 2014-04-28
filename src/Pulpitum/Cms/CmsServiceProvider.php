@@ -29,6 +29,13 @@ class CmsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		$searchable = array("pages"=>"Pulpitum\Cms\Models\Pages");
+		if(!isset($this->app['searchable'])){
+			$this->app['searchable'] = $searchable;
+		}else{
+			$this->app['searchable'] = array_merge($this->app['searchable'], $searchable);
+		}
+
         $this->app->booting(function()
         {
           $loader = \Illuminate\Foundation\AliasLoader::getInstance();

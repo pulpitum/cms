@@ -16,7 +16,8 @@ class PagesController extends FrontendController{
 
 	public function getView(){
 		$uri = Request::path();
-		$page = $this->entity->where("identifier", $uri)->where("is_active", 1)->first();
+		$page = $this->entity->View($uri);
+
 		if($page == NULL)
 			App::abort(404);
 
